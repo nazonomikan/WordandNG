@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ワードウルフ</title>
+</head>
+
+<body>
+    <h1>ワードウルフ</h1>
+
+    <div id="setup">
+        <label>人数：
+            <select id="playerCount">
+                <option value="4">4人</option>
+                <option value="5">5人</option>
+                <option value="6">6人</option>
+            </select>
+        </label>
+        <button onclick="startGame()">ゲーム開始</button>
+    </div>
+
+    <div id="check" style="display:none;">
+        <p id="checkText"></p>
+        <button onclick="nextPlayer()">確認完了</button>
+    </div>
+
+    <div id="vote" style="display:none;">
+        <p>投票フェーズ</p>
+        <button onclick="finishGame()">結果表示</button>
+    </div>
+
+    <div id="result" style="display:none;">
+        <p id="resultText"></p>
+        <p id="wolfWord"></p>
+    </div>
+
+    <script src="wordwolf.js"></script>
+</body>
+
+</html>
