@@ -1,22 +1,44 @@
-< !DOCTYPE html>
-    <html lang="ja">
+<!DOCTYPE html>
+<html lang="ja">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>NGワードゲーム</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>NGワードゲーム</title>
+    <style>
+        .selected {
+            background: #8cf;
+        }
 
-    <body>
-        <h1>NGワードゲーム</h1>
+        button {
+            margin: 4px;
+            padding: 8px 12px;
+        }
+    </style>
+</head>
 
-        <div id="start">
-            <button onclick="startNG()">スタート</button>
-        </div>
+<body>
+    <h1>NGワードゲーム</h1>
 
-        <div id="countdown" style="display:none;"></div>
-        <div id="number" style="display:none;"></div>
+    <div id="number-select">
+        <p>自分の番号を選んでください：</p>
+        <div id="numbers"></div>
+    </div>
 
-        <script src="ngword.js"></script>
-    </body>
+    <div id="instruction" style="margin-top:12px;">番号を選んでからスタートを押してください。</div>
 
-    </html>
+    <div id="start" style="margin-top:12px;">
+        <button id="startBtn" onclick="startCountdown()">スタート</button>
+    </div>
+
+    <div id="countdown" style="display:none; font-size:48px; margin-top:12px;"></div>
+    <div id="ngword" style="display:none; font-size:32px; margin-top:12px;"></div>
+
+    <div id="options" style="display:none; margin-top:12px;">
+        <button id="nextBtn" onclick="onNext()">次に進む</button>
+        <button onclick="goHome()">ホームに戻る</button>
+    </div>
+
+    <script src="ngword.js"></script>
+</body>
+
+</html>
